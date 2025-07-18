@@ -47,16 +47,13 @@ ul {
 input {
   padding: 1.02rem;
   background-color: white;
-  box-shadow: inset 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
   border: 0;
   border-radius: 0.8rem;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  border-width: 0;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
+  color: #404040;
 }
 
 input:focus {
@@ -722,8 +719,25 @@ nav ul {
 }
 
 .container-minicurso {
-  gap: 2.5rem;
+  display: flex;
+  flex-flow: column;
+  gap: 3.12rem;
   align-items: center;
+}
+.form-minicurso {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: end;
+  gap: 2rem;
+}
+.form div {
+  display: flex;
+  flex-flow: column;
+  gap: 0.82rem;
+}
+.form div label {
+  margin-left: 0.8rem;
 }
 
 .botao-minicurso {
@@ -742,7 +756,39 @@ nav ul {
 .rodape-seg-subtitulo {
   font-weight: 600;
 }
-
+.container-footer {
+  display: flex;
+  align-items: start;
+  gap: 4.88rem;
+}
+.rodape-coluna {
+  gap: 3.12rem;
+}
+.subsecao-rodape,
+.subsecao-cursosonline,
+.subsecao-assistente,
+.rodape-div-iconelink,
+.rodape-coluna {
+  display: flex;
+  flex-flow: column;
+}
+.subsecao-rodape {
+  gap: 1.6rem;
+}
+.subsecao-cursosonline {
+  gap: 1.28rem;
+}
+.subsecao-assistente {
+  gap: 1rem;
+}
+.rodape-div-iconelink {
+  gap: 0.65rem;
+}
+.rodape-iconelink {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
 .link-color {
   color: #1a77a4;
 }
@@ -760,7 +806,10 @@ nav ul {
 .rodape svg {
   width: 2.4rem;
 }
-
+.link-redessociais {
+  fill: #404040;
+  stroke: #404040;
+}
 .link-redessociais:hover svg {
   fill: #f60;
   stroke: #f60;
@@ -776,12 +825,17 @@ nav ul {
 .rodape a:hover {
   color: #f60;
 }
+.rodape-copyright {
+  text-align: center;
+}
 
 .form-newsletter {
+  display: flex;
+  flex-flow: column;
   align-items: center;
   gap: 1.6rem;
   border-radius: 2.5rem;
-  box-shadow: inset 0 0 0.8rem 0.15rem rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
   padding: 2.5rem;
   background-color: #fff;
 }
