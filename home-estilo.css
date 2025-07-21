@@ -81,6 +81,19 @@ input::placeholder {
 .realce-semibold {
   font-weight: 600;
 }
+.flex {
+  display: flex;
+  &.wrap {
+    flex-flow: row wrap;
+  }
+  &.col {
+    flex-flow: column;
+    &.wrap {
+      flex-flow: column wrap;
+    }
+  }
+}
+
 .secao {
   padding: 7.63rem 2rem;
 }
@@ -851,4 +864,96 @@ nav ul {
 }
 .logo-whatsApp:hover {
   transform: translate(0.5rem, 0.5rem);
+}
+
+/* Popup */
+
+.popup-aberto {
+  & .popup {
+    display: flex;
+  }
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.827);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  & .container {
+    position: relative;
+    width: 45rem;
+    overflow: hidden;
+    color: white;
+    background-color: black;
+    border-radius: 2.5rem;
+    border: 3px solid white;
+
+    & .imagem {
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .restante {
+      padding: 2.5rem;
+      gap: 2.5rem;
+
+      & .textos {
+        gap: 1.6rem;
+        text-align: justify;
+      }
+
+      & .form {
+        gap: 1.28rem;
+        & .botao {
+          &:link,
+          &:visited {
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            font-weight: 700;
+            /* align-self: center; */
+            padding: 0.82rem 3.12rem;
+            background-color: #ffac00;
+            border: 2px solid #785000;
+            border-right-width: 4px;
+            border-bottom-width: 4px;
+            border-radius: 0.8rem;
+          }
+          &:hover,
+          &:active {
+            border-width: 3px;
+          }
+        }
+      }
+    }
+
+    & .fechar {
+      position: absolute;
+      cursor: pointer;
+      top: 0.8rem;
+      right: 0.8rem;
+      width: 3rem;
+      height: 3rem;
+      align-items: center;
+      justify-content: center;
+      color: #303030;
+      border-radius: 50%;
+      border: 3px solid#303030;
+      background-color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 1.92rem;
+
+      &:hover {
+        border-width: 1px;
+      }
+    }
+  }
 }
