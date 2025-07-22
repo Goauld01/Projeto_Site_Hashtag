@@ -598,9 +598,13 @@ nav ul {
 }
 /* seção Blog */
 .container-blog {
-  display: flex;
-  flex-flow: row wrap;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
   gap: 2.5rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
   position: relative;
   background-color: #f9f9f9;
   padding: 4.88rem;
@@ -615,7 +619,7 @@ nav ul {
 .caixa-postblog {
   display: flex;
   flex-flow: column;
-  flex: 1 1 40%;
+  /* flex: 1 1 40%; */
   gap: 1.28rem;
   padding: 2rem;
   border-radius: 2rem;
