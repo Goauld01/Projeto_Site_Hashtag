@@ -77,6 +77,8 @@ input::placeholder {
   border: 0;
   border-bottom: solid 0.4rem #993c38;
   border-right: solid 0.4rem #993c38;
+  transition: ease-in 0.2s;
+  transition-property: border;
 }
 .realce-semibold {
   font-weight: 600;
@@ -163,21 +165,24 @@ nav ul {
   padding: 0 2rem;
 }
 
-.item-lista-cabecalho a {
-  color: #112e61;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 600;
-}
-.item-lista-cabecalho a:hover,
-.item-lista-cabecalho a:active {
-  color: #f60;
-}
-.item-lista-cabecalho.contem-filhos::after {
-  content: "\2bc6";
-  /* font-size: 1.4rem; */
-  /* margin-left: 0.5rem; */
+.item-lista-cabecalho {
+  & a {
+    color: #112e61;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color ease-in 0.3s;
+
+    &:hover,
+    &:active {
+      color: #f60;
+    }
+  }
+
+  &.contem-filhos::after {
+    content: "\2bc6";
+  }
 }
 
 /* Seção Hero */
@@ -450,18 +455,17 @@ nav ul {
 }
 .h3-diferenciais-empresas {
   font-weight: 400;
-}
-.h3-diferenciais-empresas a:link,
-.h3-diferenciais-empresas a:visited {
-  color: #005e88;
-  font-weight: 700;
-  text-decoration: none;
-}
-.h3-diferenciais-empresas a:hover,
-.h3-diferenciais-empresas a:active {
-  color: #ffaf00;
-  font-weight: 700;
-  text-decoration: none;
+  & a {
+    transition: color ease-in 0.3s;
+    color: #005e88;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: #ffaf00;
+    }
+  }
 }
 /* seçao o que falam */
 
@@ -580,22 +584,26 @@ nav ul {
   display: flex;
   justify-content: space-between;
   gap: 3.12rem;
+
+  & .namidia-titulo {
+    gap: 1.6rem;
+  }
+  & .namidia-links {
+    gap: 2rem;
+    & a {
+      transition: transform ease-in 0.2s;
+      &:hover,
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+  }
+  & .namidia-titulo,
+  & .namidia-links {
+    align-items: center;
+  }
 }
-.namidia-titulo {
-  gap: 1.6rem;
-}
-.namidia-links {
-  gap: 2rem;
-}
-.namidia-titulo,
-.namidia-links {
-  display: flex;
-  align-items: center;
-}
-.seta-namidia,
-.h2-namidia {
-  display: inline-block;
-}
+
 /* seção Blog */
 .container-blog {
   /* display: flex; */
@@ -625,9 +633,13 @@ nav ul {
   border-radius: 2rem;
   background-color: white;
   box-shadow: inset 0 0 0.4rem 0.12rem rgba(0, 0, 0, 0.15);
-}
-.caixa-postblog img {
-  width: 100%;
+  transition: transform ease-in 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  & img {
+    width: 100%;
+  }
 }
 .caixa-imgpostadoem {
   display: flex;
@@ -656,17 +668,21 @@ nav ul {
 .secao-comoajudar {
   padding: 0;
 }
+.secao-sec-laranja,
+.secao-sec-cinza {
+  padding: 7.63rem 2rem;
+  & a {
+    transition: color ease-in 0.2s;
+  }
+}
+
 .secao-sec-laranja {
   background-image: url(https://elegant-rabanadas-4b0397.netlify.app/Imagens/Formato%20Novo/BACKGROUND-banner-07.webp);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.container-comoajudar,
-.container-comoajudar-2 {
-  display: flex;
-  flex-flow: column;
-}
+
 .container-comoajudar,
 .container-comoajudar-2 {
   width: 86rem;
@@ -704,10 +720,6 @@ nav ul {
   transform: translateY(40%);
 }
 
-.secao-sec-laranja,
-.secao-sec-cinza {
-  padding: 7.63rem 2rem;
-}
 .comoajudar-paragrafo,
 .comoajudar-lista {
   font-size: 1.9rem;
@@ -742,11 +754,10 @@ nav ul {
   align-items: center;
 }
 .form-minicurso {
-  display: flex;
-  justify-content: space-between;
-  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) 1fr;
   align-items: end;
-  gap: 2rem;
+  gap: 3.9rem;
 }
 .form div {
   display: flex;
@@ -777,18 +788,16 @@ nav ul {
   display: flex;
   align-items: start;
   gap: 4.88rem;
+
+  & a {
+    transition: ease-in 0.2s;
+    transition-property: color, transform;
+  }
 }
 .rodape-coluna {
   gap: 3.12rem;
 }
-.subsecao-rodape,
-.subsecao-cursosonline,
-.subsecao-assistente,
-.rodape-div-iconelink,
-.rodape-coluna {
-  display: flex;
-  flex-flow: column;
-}
+
 .subsecao-rodape {
   gap: 1.6rem;
 }
@@ -802,7 +811,6 @@ nav ul {
   gap: 0.65rem;
 }
 .rodape-iconelink {
-  display: flex;
   align-items: center;
   gap: 0.65rem;
 }
@@ -822,6 +830,8 @@ nav ul {
 }
 .rodape svg {
   width: 2.4rem;
+  transition: ease-in 0.2s;
+  transition-property: fill, stroke;
 }
 .link-redessociais {
   fill: #404040;
