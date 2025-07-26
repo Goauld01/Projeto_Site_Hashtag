@@ -1,0 +1,140 @@
+@media all and (max-width: 30em) {
+  /* Conteudos */
+  .conteiner-conteudos {
+    & .img-conteudos {
+      width: 100%;
+    }
+
+    & .caixas-cusos-hastag {
+      flex-flow: column;
+      align-self: center;
+
+      & .circulo-logo-curso {
+        width: 6rem;
+        height: 6rem;
+        padding: 1.28rem;
+      }
+
+      & .gratuito-link-lista:link,
+      & .gratuito-link-lista:visited {
+        padding: 0.42rem 4.88rem;
+      }
+    }
+  }
+
+  /*  O que falam */
+  .secao-oquefalam {
+    & .container-oquefalam {
+      margin: 0 5.6rem;
+      & .oquefalam-titulo {
+        flex-flow: column;
+        max-width: none;
+      }
+      & .oquefalam-carrosel {
+        & .oquefalam-carrosel-imagems {
+          & .oquefalam-seta {
+            width: 5rem;
+          }
+          & .oquefalam-container-imgs {
+            & .oquefalam-carrosel-img {
+              min-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Midia */
+  .secao-namidia {
+    & .contaier-namidia {
+      flex-flow: row wrap;
+      justify-content: center;
+      & .namidia-titulo {
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+      & .namidia-links {
+        & a {
+          height: 3.86rem;
+          & img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Blog */
+  .secao-blog {
+    padding-top: 7.73rem;
+    & .container-blog {
+      padding-top: 7.73rem;
+      & .caixa-blog-h2 {
+        width: 78.125vw;
+        text-align: center;
+      }
+    }
+  }
+
+  /* Como ajudar */
+  .secao-comoajudar {
+    & .secao-sec-laranja {
+      padding: 4.88rem 2rem;
+      & .container-comoajudar {
+        & .caixa-comoajudar-h2 {
+          text-align: center;
+        }
+      }
+    }
+    & .secao-sec-cinza {
+      padding: 4.88rem 2rem;
+    }
+  }
+
+  /* Minicurso */
+  .secao-minicurso {
+    & .container-minicurso {
+      & h2 {
+        text-align: center;
+      }
+      align-items: stretch;
+      & .form-minicurso {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        max-width: 350px;
+        align-self: center;
+        width: 100%;
+      }
+    }
+  }
+
+  /* Footer */
+  .container-footer {
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+    gap: 3.2rem;
+    & .logo-footer {
+      grid-row: 1;
+      max-width: 14rem;
+    }
+    & .rodape-coluna {
+      grid-row: 2;
+      width: auto;
+      & .subsecao-rodape,
+      & .rodape-subtitulo {
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    & .form-newsletter {
+      grid-row: 3;
+    }
+    & .rodape-container-copyright {
+      padding: 0 2.21rem;
+      grid-column: auto;
+      grid-row: 4;
+    }
+  }
+}

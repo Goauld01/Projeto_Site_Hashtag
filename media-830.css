@@ -1,0 +1,14 @@
+@media all and (max-width: 51.87em) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  /* Conteudos */
+  .secao-conteudos-gratuitos {
+    & .conteiner-conteudos {
+      & .img-conteudos {
+        max-width: 41.8rem;
+      }
+    }
+  }
+}

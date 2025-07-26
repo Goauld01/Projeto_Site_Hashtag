@@ -1,0 +1,32 @@
+@media all and (max-width: 65.62em) {
+  html {
+    font-size: 50%;
+  }
+  /* Cabeçalho */
+  .cabecalho {
+    padding: 1.6rem 2rem;
+
+    & img {
+      width: 7.73vw;
+    }
+  }
+
+  nav {
+    & ul {
+      gap: 1.7vw;
+    }
+  }
+  /*  O que falam */
+  .container-oquefalam {
+    margin: 0 8.6rem;
+  }
+
+  /* Footer */
+  .container-footer {
+    gap: 3.77vw;
+
+    & .logo-footer {
+      max-width: 13.9vw;
+    }
+  }
+}
