@@ -100,7 +100,7 @@
 
   /* Hero */
   .secao-hero {
-    background-image: url(https://elegant-rabanadas-4b0397.netlify.app/Imagens/Formato%20Novo/BACKGROUN-banner-01-mobile.webp);
+    background-image: url("imagens/Form-Novo/BACKGROUN-banner-01-mobile.webp");
 
     & .container-hero {
       flex-flow: column;
